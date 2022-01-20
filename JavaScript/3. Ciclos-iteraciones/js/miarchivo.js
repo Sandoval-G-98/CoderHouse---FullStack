@@ -1,5 +1,5 @@
 
-let numToMult = 1
+ let numToMult = 1
 let number
 let isResultCorrect = false
 const LIMIT_TO_MULT = 10
