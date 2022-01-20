@@ -28,10 +28,7 @@ function calculateInterest(){
 
 function isInformationCorrect(data, dataName){
 
-    console.log("dentro de la funcion de validacion")
     if (isNaN(data) || data == "" || data < 0){
-        console.log("Estoy dentro del if")
-        console.log(`Tengo ${data} del campo ${dataName}`)
         switch(dataName){
             case "startingAmount":
                 alert("Error en el campo de monto inicial")
