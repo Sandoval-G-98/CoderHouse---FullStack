@@ -1,0 +1,26 @@
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+nav{
+    background-color: red;
+}
+
+footer{
+     background-color: green;
+}
+
+header{
+    background-color: grey;
+}
+p{
+    text-align: center;
+}
+
+footer p{
+    text-align: left;
+}
