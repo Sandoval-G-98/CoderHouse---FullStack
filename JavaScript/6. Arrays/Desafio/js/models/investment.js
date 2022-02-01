@@ -1,4 +1,4 @@
-export default class Investment{
+class Investment{
     
     constructor(startingAmount, monthlyAdition, yearsTocalculate, interest){
         this.startingAmount = startingAmount
@@ -8,26 +8,7 @@ export default class Investment{
         this.totalAmount = this.staringAmount
     }
 
-    calculateInterest(){
     
-        if(isInformationCorrect(this.startingAmount, "startingAmount") && isInformationCorrect(this.monthlyAdition, "monthlyAdition") &&
-            isInformationCorrect(this.yearsTocalculate, "yearsTocalculate") && isInformationCorrect(this.interest, "interest")){        
-            
-            for (let i = 0; i < this.yearsTocalculate; i++){
-                for (let month = 0; month < 12 ; month++){
-                    this.totalAmount = this.totalAmount + (this.totalAmount * this.interest)/12 + this.monthlyAdition
-                }
-            }
-            
-            this.totalAmount = this.totalAmount.toFixed(2)
-        
-            return this.totalAmount
-        }
-        
-        return -1
-    }
-    
-
     isInformationCorrect(data, dataName){
 
         if (isNaN(data) || data == "" || data < 0){
@@ -51,4 +32,25 @@ export default class Investment{
         }
         return true
     }
+
+    calculateInterest(){
+    
+        if(isInformationCorrect(this.startingAmount, "startingAmount") && isInformationCorrect(this.monthlyAdition, "monthlyAdition") &&
+            isInformationCorrect(this.yearsTocalculate, "yearsTocalculate") && isInformationCorrect(this.interest, "interest")){        
+            
+            for (let i = 0; i < this.yearsTocalculate; i++){
+                for (let month = 0; month < 12 ; month++){
+                    this.totalAmount = this.totalAmount + (this.totalAmount * this.interest)/12 + this.monthlyAdition
+                }
+            }
+            
+            this.totalAmount = this.totalAmount.toFixed(2)
+
+            return this.totalAmount
+        }
+        
+        return -1
+    }
+    
+
 }

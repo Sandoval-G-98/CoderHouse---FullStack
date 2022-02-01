@@ -1,69 +1,15 @@
-/*function calculateInterest(){
-    let startingAmount = parseInt(document.getElementById("startingAmount").value)
-    let monthlyAdition = parseInt(document.getElementById("monthlyAdition").value)
-    let yearsTocalculate = parseInt(document.getElementById("yearsToCalculate").value)
-    let interest = parseInt(document.getElementById("interest").value)
-    let totalAmount = startingAmount
-    interest = interest / 100
-
-    if(isInformationCorrect(startingAmount, "startingAmount") && isInformationCorrect(monthlyAdition, "monthlyAdition") &&
-        isInformationCorrect(yearsTocalculate, "yearsTocalculate") && isInformationCorrect(interest, "interest")){        
-        
-        for (let i = 0; i < yearsTocalculate; i++){
-            for (let month = 0; month < 12 ; month++){
-                totalAmount = totalAmount + (totalAmount * interest)/12 + monthlyAdition
-            }
-        }
-        
-        totalAmount = totalAmount.toFixed(2)
-    
-        console.log(`Su capital luego de ${yearsTocalculate} años es de ${totalAmount}`)
-        
-        return
-    }
-
-    console.log("Error en el ingreso de información")
-}
-
-function isInformationCorrect(data, dataName){
-
-    if (isNaN(data) || data == "" || data < 0){
-        switch(dataName){
-            case "startingAmount":
-                alert("Error en el campo de monto inicial")
-                break
-            case "monthlyAdition":
-                alert("Error en el campo de adicion mensual")
-                break
-            case "yearsTocalculate":
-                alert("Error en el campo de cantidad de años")
-                break
-            case "interest":
-                alert("Error en el campo de interes anual")
-                break
-            default:
-                break
-        }
-        return false
-    }
-    return true
-}*/
-
-import Investment from "./models/investment.js"
-
 function calculate(){
-
     let startingAmount = parseInt(document.getElementById("startingAmount").value)
     let monthlyAdition = parseInt(document.getElementById("monthlyAdition").value)
     let yearsTocalculate = parseInt(document.getElementById("yearsToCalculate").value)
     let interest = parseInt(document.getElementById("interest").value)
     
-    const invest = new Investment(startingAmount, monthlyAdition, yearsTocalculate, interest)
+    let invest = new Investment(startingAmount, monthlyAdition, yearsTocalculate, interest)
     
     totalAmount = invest.calculateInterest()
     
     if(totalAmount != -1)
-        console.log(`Su capital luego de ${this.yearsTocalculate} años es de ${this.totalAmount}`)
+        console.log(`Su capital luego de ${yearsTocalculate} años es de ${totalAmount}`)
     else
         console.log("Error en el ingreso de información")
 }
