@@ -2,8 +2,7 @@ import { Investment } from "./models/investment.js";
 
 document
   .querySelector("#calcular")
-  .addEventListener("click", function calculate() {
-    console.log("pueba evento click")
+  .addEventListener("click", function calculate() { 
 
     let startingAmount = parseInt(document.getElementById("startingAmount").value)
     let monthlyAdition = parseInt(document.getElementById("monthlyAdition").value)
