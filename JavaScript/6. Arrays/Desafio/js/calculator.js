@@ -51,8 +51,6 @@ document
             }
 
         }while(answer != "si" || answer != "no")
-        
-        
 
     } else 
         console.log("Error en el ingreso de información");

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src='https://cdn.plot.ly/plotly-2.8.3.min.js'></script>
+    <title> Preentrega </title>
+  </head>
+  <body>
+    <header>
+      <h1>Calculadora de interés compuesto</h1>
+
+      <div>
+        <p>
+          Esta página te permite calcular el monto final que obtendrás aplicando
+          interés compuesto mes a mes en tus ahorros
+        </p>
+      </div>
+
+      <h3>¿ Cuánto puede crecer tu dinero ?</h3>
+    </header>
+
+    <main>
+      <form action="">
+        
+        <div>
+          <label for = "starting amount"> Ingrese monto inicial </label>
+          <input type="text" name="starting amount" id="startingAmount"/>
+        </div>
+
+        <div>
+          <label for = "monthly adition"> Adición mensual </label>
+          <input type="text" name="monthly adition" id="monthlyAdition"/>
+        </div>
+
+        <div>
+          <label for = "years to calculate"> Ingrese la cantidad de años </label>
+          <input type="text" name="years to calculate" id="yearsToCalculate"/>
+        </div>
+
+        <div>
+          <label for = "interest rate"> Ingrese tasa de interes </label>
+          <input type="text" name="interest rate" id="interest"/>
+        </div>
+
+        <div>
+          <label for = "wished amount"> Ingrese el monto al que desea llegar con sus ahorros </label>
+          <input type="text" name="wished amount" id="wishedAmount"/>
+        </div>
+        
+        <button id="calculate" type="button">Calcular</button>
+    
+      </form>
+      
+      <h2 id = "graphic-all-years"></h2>
+
+      <div id="Graphic"></div>
+      
+    </main>
+
+    <footer>
+        <p>Powered by Gabriel Sandoval</p>
+    </footer>
+    
+    <script src="js/calculator.js" type="module"></script>
+    <script src="js/models/chartAllYears.js" type="module"></script>
+
+  </body>
+</html>
