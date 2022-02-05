@@ -1,0 +1,99 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    font-family: georgia;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-family: cursive;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+nav {
+    background-color: red;
+}
+
+footer {
+     background-color: orange;
+}
+
+header {
+    background-color: #c0c0c0;
+}
+
+
+footer p {
+    display: flex;
+    justify-content: left;
+}
+
+.images-home {
+    display:    flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+header nav ul li a {
+    font-size: 20;
+    font-family: 'Verdana';
+}
+
+section h3 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.map {
+    display: flex;
+    justify-content: center;
+}
+
+.routes {
+    display: flex;
+    justify-content: left;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+}
+
+div.gallery-women {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-photo-footer {
+    display: flex;
+    justify-content: right;
+    
+}
