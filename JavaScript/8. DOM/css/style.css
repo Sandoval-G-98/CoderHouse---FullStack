@@ -1,0 +1,21 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    background-color: yellowgreen;
+}
+
+h3 {
+    background-color: yellow;
+}
+
+div p{
+    font: 120% sans-serif;
+}
+
+footer {
+    position: static;
+    bottom: 0;
+}
