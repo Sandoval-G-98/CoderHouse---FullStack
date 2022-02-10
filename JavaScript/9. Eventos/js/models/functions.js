@@ -1,12 +1,46 @@
-import { Investment } from "./models/investment.js";
-import { showGraphicAllYears } from "./models/chartAllYears.js"
+import { Investment } from "../class/investment.js";
 
-let btnCalculate = document.getElementById("calculate")
+export function showGraphicAllYears(){
 
-btnCalculate.addEventListener("click", calculate)
-btnCalculate.addEventListener("click", showGraphicAllYears)
+    let startingAmount = parseInt(document.getElementById("startingAmount").value)
+    let monthlyAdition = parseInt(document.getElementById("monthlyAdition").value)
+    let yearsTocalculate = parseInt(document.getElementById("yearsToCalculate").value)
+    let interest = parseInt(document.getElementById("interest").value);
+    let wishedAmount = parseInt(document.getElementById("wishedAmount").value)
+    
+    let invest = new Investment(startingAmount, monthlyAdition, yearsTocalculate, interest, wishedAmount)
 
-function calculate() {
+    invest.calculateInterest()
+    
+    if(invest.amountPerYear.length > 0){
+        
+        document.getElementById("graphic-all-years").innerHTML = "Gráfico del interes compuesto total"
+        
+        let yearsArray = []
+        
+        for(let year = 1; year <= invest.amountPerYear.length; year++)
+            yearsArray.push(year)
+
+        var data = [
+            {
+              x: yearsArray,
+              y: invest.amountPerYear,
+              type: "bar"
+            }
+          ];
+        
+        var layout = { 
+          title: 'Ahorro por año',
+          font: {size: 18}
+        };
+        
+        var config = {responsive: true}
+          
+          Plotly.newPlot("Graphic", data, layout, config);
+    }
+}
+
+export function calculate() {
     let startingAmount = parseInt(document.getElementById("startingAmount").value)
     let monthlyAdition = parseInt(document.getElementById("monthlyAdition").value)
     let yearsTocalculate = parseInt(document.getElementById("yearsToCalculate").value)
@@ -35,9 +69,9 @@ function startCalculate( startingAmount, monthlyAdition, yearsTocalculate, inter
 
                 let yearWishedAmount = invest.amountPerYear.indexOf(amountThatOverAmountWished) + 1
 
-                console.log(`Felicidades! Su monto deseado fue alcanzado el año ${yearWishedAmount}`)
+                alert(`Felicidades! Su monto deseado fue alcanzado el año ${yearWishedAmount}`)
             } else {
-                console.log("No llegó a su monto deseado :( , es momento de invertir más")
+                alert("No llegó a su monto deseado :( , es momento de invertir más")
             }
 
             let labelTotalAmount = document.getElementById("amountPerYear")
