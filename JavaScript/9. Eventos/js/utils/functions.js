@@ -1,44 +1,6 @@
 import { Investment } from "../class/investment.js";
 
-export function showGraphicAllYears(){
-
-    let startingAmount = parseInt(document.getElementById("startingAmount").value)
-    let monthlyAdition = parseInt(document.getElementById("monthlyAdition").value)
-    let yearsTocalculate = parseInt(document.getElementById("yearsToCalculate").value)
-    let interest = parseInt(document.getElementById("interest").value);
-    let wishedAmount = parseInt(document.getElementById("wishedAmount").value)
-    
-    let invest = new Investment(startingAmount, monthlyAdition, yearsTocalculate, interest, wishedAmount)
-
-    invest.calculateInterest()
-    
-    if(invest.amountPerYear.length > 0){
-        
-        document.getElementById("graphic-all-years").innerHTML = "Gráfico del interes compuesto total"
-        
-        let yearsArray = []
-        
-        for(let year = 1; year <= invest.amountPerYear.length; year++)
-            yearsArray.push(year)
-
-        var data = [
-            {
-              x: yearsArray,
-              y: invest.amountPerYear,
-              type: "bar"
-            }
-          ];
-        
-        var layout = { 
-          title: 'Ahorro por año',
-          font: {size: 18}
-        };
-        
-        var config = {responsive: true}
-          
-          Plotly.newPlot("Graphic", data, layout, config);
-    }
-}
+/// Funciones para calcular la inversion
 
 export function calculate() {
     let startingAmount = parseInt(document.getElementById("startingAmount").value)
@@ -143,4 +105,46 @@ function validateAndShowInvestYearBreakdow(invest){
         }
 
     }while(answer != "si" || answer != "no")
+}
+
+/// Funcion para mostrar el gráfico
+
+export function showGraphicAllYears(){
+
+    let startingAmount = parseInt(document.getElementById("startingAmount").value)
+    let monthlyAdition = parseInt(document.getElementById("monthlyAdition").value)
+    let yearsTocalculate = parseInt(document.getElementById("yearsToCalculate").value)
+    let interest = parseInt(document.getElementById("interest").value);
+    let wishedAmount = parseInt(document.getElementById("wishedAmount").value)
+    
+    let invest = new Investment(startingAmount, monthlyAdition, yearsTocalculate, interest, wishedAmount)
+
+    invest.calculateInterest()
+    
+    if(invest.amountPerYear.length > 0){
+        
+        document.getElementById("graphic-all-years").innerHTML = "Gráfico del interes compuesto total"
+        
+        let yearsArray = []
+        
+        for(let year = 1; year <= invest.amountPerYear.length; year++)
+            yearsArray.push(year)
+
+        var data = [
+            {
+              x: yearsArray,
+              y: invest.amountPerYear,
+              type: "bar"
+            }
+          ];
+        
+        var layout = { 
+          title: 'Ahorro por año',
+          font: {size: 18}
+        };
+        
+        var config = {responsive: true}
+          
+          Plotly.newPlot("Graphic", data, layout, config);
+    }
 }
