@@ -10,7 +10,6 @@
     background-image: url(../media/images/backgrounds/background-marmol-white.jpg);
 }
 
-
 #grid-images-home{
     display: grid;
     justify-content: center;
@@ -18,6 +17,10 @@
     width: 100%;
     height: 100%;
     background-image: url(../media/images/backgrounds/background-marmol-white.jpg);
+}
+
+.card:hover{
+    transform: rotate(20deg);
 }
 
 header {
@@ -223,6 +226,9 @@ h2 {
     margin: 15px;
 }
 
+.contact-form .button-send:hover {
+    background-color: rgb(114, 226, 104);
+}
 
 @media only screen and (max-width: 600px) {
 
