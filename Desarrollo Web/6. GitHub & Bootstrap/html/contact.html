@@ -4,64 +4,91 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/index-style.css">
     <title> Contacto </title>
 </head>
-<body>
-    <header>
-        <h1> Contacto </h1>
-        <div id = "image-logo">
-            <img src="../media/images/logos/logo-alaska-2.png" alt="250" width="250">
-        </div>      
-    </header> 
-    <nav>
-        <ul>
-            <li>
-                <a href="../index.html"> Home </a>
-            </li>
-            <li>
-                <a href="men.html"> Hombre </a>
-            </li>
-            <li>
-                <a href="women.html"> Mujer </a>
-            </li>
-            <li>
-                <a href="discounts.html"> Descuentos </a>
-            </li>
-            <li>
-                <a href="contact.html"> Contacto </a>
-            </li>
-        </ul>
-    </nav>
-    <main>
-        <h2> Contactate con nosotros </h2>
-        <section class = "contact-form">
-            <h4> Formulario de contacto </h4>
-            <form>
-                <input class = "data-form" type="text" id = "nameForm" placeholder = "Ingresa tu nombre"> <br>
-                <input class = "data-form" type="text"  id = "lastnameForm" placeholder = "Ingresa tu apellido"> <br>
-                <input class = "data-form" type="text" id = "emailForm" placeholder = "Ingresa tu correo electronico"> <br>
-                <label for="messageForm"> Escribi tu mensaje </label> <br>
-                <textarea id="messageForm" cols="30" rows="10"></textarea> <br>
-                <button class = "button-send" type="submit"> Enviar </button>
-            </form>
-        </section>
-        <section id = "map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.039409705688!2d-58.86216518423619!3d-34.628444366314845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc912485a8db69%3A0xe736248fffd7042b!2sAlaska%20Indumentaria!5e0!3m2!1ses-419!2sar!4v1645321230247!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>        </section>
-    </main>
+    <body>
+        <header>
+            <h1> Contacto </h1>
+            <div id = "image-logo">
+                <img src="../media/images/logos/logo-alaska-2.png" alt="250" width="250">
+            </div>      
+        </header> 
+        <nav>
+            <ul>
+                <li>
+                    <a href="../index.html"> Home </a>
+                </li>
+                <li>
+                    <a href="men.html"> Hombre </a>
+                </li>
+                <li>
+                    <a href="women.html"> Mujer </a>
+                </li>
+                <li>
+                    <a href="discounts.html"> Descuentos </a>
+                </li>
+                <li>
+                    <a href="contact.html"> Contacto </a>
+                </li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <h2> Contactate con nosotros </h2>
+            <section class = "contact-form">
+                <h4> Formulario de contacto </h4>
+                <!--<form>
+                    <input class = "data-form" type="text" id = "nameForm" placeholder = "Ingresa tu nombre"> <br>
+                    <input class = "data-form" type="text"  id = "lastnameForm" placeholder = "Ingresa tu apellido"> <br>
+                    <input class = "data-form" type="text" id = "emailForm" placeholder = "Ingresa tu correo electronico"> <br>
+                    <label for="messageForm"> Escribi tu mensaje </label> <br>
+                    <textarea id="messageForm" cols="30" rows="10"></textarea> <br>
+                    <button class = "button-send" type="submit"> Enviar </button>
+                </form>-->
+                <form>
+                    <div class="mb-3">
+                      <label for="inputName" class="form-label">Ingresa tu nombre</label>
+                      <input type="text" class="form-control" id="inputName" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                      <label for="inputLastName" class="form-label">Ingresa tu apellido</label>
+                      <input type="text" class="form-control" id="inputLastName">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputEmail" class="form-label">Ingresa tu correo electronico</label>
+                        <input type="text" class="form-control" id="inputEmail">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputMessage" class="form-label">Dejanos tu mensaje</label>
+                        <textarea id="messageForm" cols="30" rows="10"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                  </form>
+            </section>
+            <section id = "map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.039409705688!2d-58.86216518423619!3d-34.628444366314845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc912485a8db69%3A0xe736248fffd7042b!2sAlaska%20Indumentaria!5e0!3m2!1ses-419!2sar!4v1645321230247!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>        </section>
+        </main>
 
-    <footer>
-        <div class = "signature">
-            <p> Powered by Gabriel Sandoval </p>
-        </div>
-        <div class = "social-photo-footer">
-            <a href="https://www.facebook.com/vg.acces.1"  target="_blank">
-                <img src="../media/images/logos/logo-facebook.png" alt="50" height="50">
-            </a>
-            <a href = "https://www.instagram.com/alaskaindumentaria0/" target="_blank">
-                <img src="../media/images/logos/logo-instragram.png" alt="50" height="50" >
-            </a> 
-        </div>   
-    </footer>
-</body>
+        <footer>
+            <div class = "signature">
+                <p> Powered by Gabriel Sandoval </p>
+            </div>
+            <div class = "social-photo-footer">
+                <a href="https://www.facebook.com/vg.acces.1"  target="_blank">
+                    <img src="../media/images/logos/logo-facebook.png" alt="50" height="50">
+                </a>
+                <a href = "https://www.instagram.com/alaskaindumentaria0/" target="_blank">
+                    <img src="../media/images/logos/logo-instragram.png" alt="50" height="50" >
+                </a> 
+            </div>   
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    </body>
 </html>
