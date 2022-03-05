@@ -1,0 +1,225 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+#grid-body {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../media/images/backgrounds/background-marmol-white.jpg); }
+
+#grid-images-home {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-image: url(../media/images/backgrounds/background-marmol-white.jpg); }
+
+.card:hover {
+  transform: rotate(20deg); }
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+  background-image: url(../media/images/backgrounds/background-header.png); }
+
+h1 {
+  color: white;
+  font: verdana, Arial, sans-serif; }
+
+a {
+  text-decoration: none;
+  font: verdana, Arial, sans-serif; }
+
+ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+
+li {
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 25px;
+  list-style: none; }
+
+.card {
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  flex-direction: column;
+  height: 250px;
+  width: 250px;
+  background-size: cover;
+  margin: 20px; }
+
+#image-home-1 {
+  background-image: url("../media/images/home_clothes/Ropa1.png");
+  background-size: cover; }
+
+#image-home-2 {
+  background-image: url("../media/images/home_clothes/Ropa2.png");
+  background-size: cover; }
+
+#image-home-3 {
+  background-image: url("../media/images/home_clothes/Ropa3.png");
+  background-size: cover; }
+
+#image-home-4 {
+  background-image: url("../media/images/home_clothes/Ropa4.png");
+  background-size: cover; }
+
+nav {
+  background-color: rgba(226, 161, 41, 0.856); }
+
+nav ul li:hover {
+  transform: scale(2, 2); }
+
+#container-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20px; }
+
+#list-routes ul {
+  display: flex;
+  flex-direction: column; }
+
+#list-routes ul li p {
+  font-size: 16px; }
+
+footer {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "signature photos";
+  background-image: linear-gradient(to right, #c7b7b7, #6e6e6e); }
+
+.signature {
+  align-self: center;
+  justify-self: left; }
+
+.social-photo-footer {
+  align-self: center;
+  justify-self: right; }
+
+iframe {
+  background-size: cover; }
+
+#gallery-clothes {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin: 20px; }
+
+.card-gallery-clothes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  margin: 20px; }
+
+h2 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  margin-top: 10px; }
+
+#map {
+  display: flex;
+  justify-content: center; }
+
+.button-add {
+  background-color: #0756ff;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.5s; }
+
+.button-add:hover {
+  background-color: #0bdc4a;
+  color: white; }
+
+.form {
+  display: flex;
+  justify-content: center; }
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  background-color: #8e8f91;
+  padding: 40px;
+  margin: auto;
+  margin-top: 30px;
+  font-family: 'calibri';
+  color: white; }
+
+.contact-form h4 {
+  display: flex;
+  justify-content: center;
+  font: 22 px;
+  margin-bottom: 20px; }
+
+.data-form {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px; }
+
+.contact-form .button-send {
+  width: 100%;
+  background-color: #6889e2;
+  border: none;
+  padding: 10px;
+  color: white;
+  margin: 15px; }
+
+.contact-form .button-send:hover {
+  background-color: #72e268; }
+
+@media only screen and (max-width: 600px) {
+  ul {
+    flex-direction: column;
+    height: 250px; }
+  #grid-images-home {
+    grid-template-columns: 100%;
+    grid-template-areas: "foto1"  "foto2"  "foto3"  "foto4"; }
+  #gallery-clothes {
+    grid-template-columns: 100%;
+    grid-template-areas: "clothe1"  "clothe2"  "clothe3"  "clothe4" "clothe5" "clothe6"; } }
+
+@media only screen and (min-width: 600px) {
+  ul {
+    flex-direction: row;
+    height: 150px; }
+  #grid-images-home {
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "foto1 foto2"  "foto3 foto4"; }
+  #gallery-clothes {
+    grid-template-columns: 100%;
+    grid-template-areas: "clothe1"  "clothe2"  "clothe3"  "clothe4" "clothe5" "clothe6"; } }
+
+@media only screen and (min-width: 992px) {
+  ul {
+    flex-direction: row;
+    height: 150px; }
+  #grid-images-home {
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-areas: "foto1 foto2 foto3 foto4"; }
+  #gallery-clothes {
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "clothe1 clothe2"  "clothe3 clothe4" "clothe5 clothe6"; } }
