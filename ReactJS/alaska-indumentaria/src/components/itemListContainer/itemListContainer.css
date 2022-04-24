@@ -1,0 +1,8 @@
+#item-list-container{
+    display: flex;
+    justify-content: center;
+}
+
+#item-list-container p {
+    color: black;
+}
