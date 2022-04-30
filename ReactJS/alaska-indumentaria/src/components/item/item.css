@@ -1,0 +1,7 @@
+#card-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-style: groove;
+  margin: 10px;
+}

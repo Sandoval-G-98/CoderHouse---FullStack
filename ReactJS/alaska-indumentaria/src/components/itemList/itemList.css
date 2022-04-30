@@ -1,0 +1,9 @@
+#container-item-list {
+    display: flex;
+}
+
+@media (max-width = 600px){
+    #container-item-list {
+        flex-direction: column;
+    }
+}

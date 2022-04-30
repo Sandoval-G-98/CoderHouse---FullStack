@@ -2,13 +2,12 @@ import React from 'react'
 import CartWidget from '../cartWidget/CartWidget'
 import './Navbar.css'
 import '../../containers/containerNavBar.css'
-import logoAlaska from '../../img/logo-alaska.png'
 
 const NavBar = () => {
   return (
     <div id = "container-nav-bar">
       <div id = "logo">
-        <img src = {logoAlaska} alt = "250" width = "250"/>
+        <img src = '/img/logo/logo-alaska.png' alt = "250" width = "250"/>
       </div>
       <div>
         <nav>
