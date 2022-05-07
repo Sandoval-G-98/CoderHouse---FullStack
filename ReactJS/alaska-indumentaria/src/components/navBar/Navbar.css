@@ -9,6 +9,7 @@ nav{
     justify-content: center;
     background-color: black;
     height: 100px;
+    width: 100%;
 }
 
 ul {
@@ -42,5 +43,6 @@ li {
         display: flex;
         justify-content: center;
         height: 200px;
+        width: 100%;
     }
 }

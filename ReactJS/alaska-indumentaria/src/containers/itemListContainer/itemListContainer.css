@@ -1,0 +1,33 @@
+#item-list-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-evenly;
+    margin:0;
+}
+
+#item-list-container p {
+    color: black;
+}
+
+#item-list-container li{
+    color: black;
+}
+
+@media (max-width: 600px) {
+    #item-list-container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin:0;
+    }
+}
+
+@media ( (min-width: 600) and (max-width: 800px)) {
+    #item-list-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-evenly;
+        width: 100%;
+        margin:0;
+    }
+}

@@ -1,0 +1,13 @@
+#item-detail-container {
+    align-self: center;
+    justify-self: center;
+}
+
+@media (max-width: 600px) {
+    #item-detail-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
