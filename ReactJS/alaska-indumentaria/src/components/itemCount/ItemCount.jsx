@@ -1,12 +1,13 @@
 import { React, useState } from 'react'
 import "./itemCount.css"
 
-export const ItemCount = ( {item, addToCart, onAdd} ) => {
+export const ItemCount = ( {item, addToCart, onAdd, stock} ) => {
     
     const [counter, setCounter] = useState(1)
 
     const incrementCounter = () => {
-        setCounter(counter+1)
+        if (counter < stock)
+            setCounter(counter+1)
     }
 
     const decrementCounter = () => {
@@ -21,7 +22,7 @@ export const ItemCount = ( {item, addToCart, onAdd} ) => {
                     <button onClick = {incrementCounter}> + </button>
                 </div>
                 <div>
-                    <p> {counter} </p>
+                    <span> {counter} </span>
                 </div>
                 <div>
                     <button onClick = {decrementCounter}> - </button>

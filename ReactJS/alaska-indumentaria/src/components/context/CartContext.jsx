@@ -35,11 +35,6 @@ export const CartProvider = ({ children }) => {
                 }
             ])
         }
-        items.forEach((item) =>{
-            console.log("item: " + item.id)
-            console.log("counter: " + item.counter)
-            console.log("totalPrice: " + item.totalPrice)
-        })
     }
 
     const isInCart = (itemId) => {
@@ -54,11 +49,12 @@ export const CartProvider = ({ children }) => {
         setItems ([])
     }
 
+
     const context = {
         items,
         addToCart,
         removeFromCart,
-        clear
+        clear,
     }
 
     return (

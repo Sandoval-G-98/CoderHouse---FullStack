@@ -1,0 +1,14 @@
+#item-cart {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10px;
+}
+
+
+@media (max-width = 600px){
+    #container-item-list {
+        flex-direction: column;
+    }
+}

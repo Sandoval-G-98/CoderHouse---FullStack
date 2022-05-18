@@ -39,9 +39,10 @@ export const ItemDetail = ({clothes, itemId}) => {
       <div id = "detail-description"> 
         <p id = "title"> {clothe.title} </p>
         <p id = "price"> ${clothe.price} </p>
+        <p id = "stock"> Stock {clothe.stock}</p>
         <div>
           { add ? <div><Link to = "/cart"><button> Terminar mi compra </button></Link></div>
-          : <div><ItemCount item = {clothe} addToCart = {addToCart} onAdd = {onAdd}></ItemCount> </div>
+          : <div><ItemCount item = {clothe} addToCart = {addToCart} onAdd = {onAdd} stock = {clothe.stock}></ItemCount> </div>
           }
         </div>
       </div>
