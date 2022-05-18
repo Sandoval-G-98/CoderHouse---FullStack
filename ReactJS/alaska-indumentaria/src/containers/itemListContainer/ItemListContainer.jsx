@@ -22,7 +22,7 @@ const ItemListContainer = ({genre}) => {
 
   }, [dataClothes])
 
-  return ( 
+  return (
     <div id = "item-list-container">
       <ItemList clothes = {clothes} genre = {genre}></ItemList>
     </div>

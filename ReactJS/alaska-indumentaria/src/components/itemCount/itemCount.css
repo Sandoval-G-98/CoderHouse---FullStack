@@ -1,0 +1,11 @@
+#item-counter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#cart-decision {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

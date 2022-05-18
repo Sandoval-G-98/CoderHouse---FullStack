@@ -5,7 +5,7 @@ export const clothesWoman = [
 ]
 
 export const clothesMan = [
-    {id: 123, title: "Buzo", price: "4500", imageUrl: "/img/clothes/man/buzo.png"},
-    {id: 456, title: "Camiseta", price: "450", imageUrl: "/img/clothes/man/camiseta.png"},
-    {id: 567, title: "Pantalon", price: "45", imageUrl: "/img/clothes/man/pantalon.png"},
+    {id: 159, title: "Buzo", price: "4500", imageUrl: "/img/clothes/man/buzo.png"},
+    {id: 951, title: "Camiseta", price: "450", imageUrl: "/img/clothes/man/camiseta.png"},
+    {id: 124, title: "Pantalon", price: "4500", imageUrl: "/img/clothes/man/pantalon.png"},
 ]

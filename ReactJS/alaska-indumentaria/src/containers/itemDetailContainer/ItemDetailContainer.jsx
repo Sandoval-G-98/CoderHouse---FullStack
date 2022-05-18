@@ -24,8 +24,10 @@ const ItemDetailContainer = ({genre}) => {
 
   }, [dataClothes])
 
-  return ( 
-    <div id = "item-detail-container"> <ItemDetail clothes = {clothes} itemId = {itemId} ></ItemDetail></div>
+  return (
+    <div id = "item-detail-container"> 
+        <ItemDetail clothes = {clothes} itemId = {itemId} ></ItemDetail>
+    </div>
   )
 }
 
