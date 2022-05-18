@@ -1,37 +1,19 @@
+import {getDocs, getFirestore, where, collection, query} from "firebase/firestore"
 import { React, useEffect, useState, useContext } from 'react'
 import { CartContext } from '../context/CartContext'
-import "./itemDetail.css"
 import { ItemCount } from "../itemCount/ItemCount"
 import {Link} from "react-router-dom"
+import "./itemDetail.css"
 
-export const ItemDetail = ({clothes, itemId}) => {
+export const ItemDetail = ({clothe}) => {
 
   const { addToCart } = useContext(CartContext)
 
-  const [clothe, setClothe] = useState({})
   const [add, setAdd] = useState(false)
   
   const onAdd = () => {
     setAdd(!add)
   }
-
-  useEffect( () =>{
-    
-    const getItem = () => {
-      return new Promise ((resolve) => {
-        setTimeout(() => {
-          resolve( clothes.find( clothe => clothe.id == itemId))
-        }, 2000)
-      })
-    }
-
-    (async () => {
-      const itemData = await getItem()
-      if (itemData) {
-        setClothe(itemData)
-      }
-    })()
-  }, [clothes, itemId])
 
   return (
     <div id = "item-detail">
