@@ -12,10 +12,10 @@ function App() {
           <BrowserRouter>
             <NavBar></NavBar>
             <Routes>
-              <Route path = "/" element = "Hola inicio"></Route>
+              <Route path = "/" element = "Inicio en construccion..."></Route>
               <Route path = "/man" element = {<ItemListContainer genre = "man"/>}></Route>
               <Route path = "/woman" element =  {<ItemListContainer genre = "woman"/>}></Route>
-              <Route path = "/contact" element = "Hola contacto"></Route>
+              <Route path = "/contact" element = "Contacto en construccion..."></Route>
               <Route path = "/cart" element = {<Cart></Cart>}></Route>
               <Route path = "/man/:itemId" element = {<ItemDetailContainer genre = "man"/>}></Route>
               <Route path = "/woman/:itemId" element =  {<ItemDetailContainer genre = "woman"/>}></Route>
